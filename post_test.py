@@ -14,11 +14,11 @@ def update_ethercalc_cell(sheet_name, cell, value):
     response = requests.post(url, json={'command': command})
 
     # 檢查響應
-    if response.status_code == 200:
+    if response.status_code == 202:
         print("成功更新單元格")
     else:
         print("更新失敗", response.status_code)
 
 
 # 使用示例：將 my_spreadsheet 表格中的 A1 單元格更新為 "Hello"
-update_ethercalc_cell('otd4vhbpd4bh', 'C9', 'hi')
+update_ethercalc_cell('mysheet', 'C9', 'hi \n1. \n2. \n3.')
